@@ -48,7 +48,7 @@ gflags.DEFINE_integer(
 class FetchItem(workers.WorkItem):
     """Work item that is handled by fetching a URL."""
 
-    def __init__(self, url, post=None, timeout_seconds=30, result_path=None,
+    def __init__(self, url, post=None, timeout_seconds=120, result_path=None,
                  username=None, password=None):
         """Initializer.
 

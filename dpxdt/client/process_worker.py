@@ -51,7 +51,7 @@ class ProcessWorkflow(workers.WorkflowItem):
         """Return the arguments for running the subprocess."""
         raise NotImplemented
 
-    def run(self, log_path, timeout_seconds=30):
+    def run(self, log_path, timeout_seconds=120):
         start_time = time.time()
         with open(log_path, 'a') as output_file:
             args = self.get_args()

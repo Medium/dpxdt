@@ -60,7 +60,7 @@ gflags.DEFINE_integer(
     'pdiff_threads', 1, 'Number of perceptual diff threads to run')
 
 gflags.DEFINE_integer(
-    'pdiff_timeout', 60,
+    'pdiff_timeout', 120,
     'Seconds until we should give up on a pdiff sub-process and try again.')
 
 DIFF_REGEX = re.compile(".*all:.*\(([0-9e\-\.]*)\).*")

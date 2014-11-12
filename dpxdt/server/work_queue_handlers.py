@@ -64,7 +64,7 @@ def handle_lease(queue_name):
             queue_name,
             owner,
             request.form.get('count', 1, type=int),
-            request.form.get('timeout', 60, type=int))
+            request.form.get('timeout', 120, type=int))
     except work_queue.Error, e:
         return utils.jsonify_error(e)
 

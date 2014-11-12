@@ -174,7 +174,7 @@ def _task_to_dict(task):
 # would let users run their own workers for server-side capture queues.
 
 
-def lease(queue_name, owner, count=1, timeout_seconds=60):
+def lease(queue_name, owner, count=1, timeout_seconds=120):
     """Leases a work item from a queue, usually the oldest task available.
 
     Args:

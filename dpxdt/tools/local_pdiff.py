@@ -39,7 +39,7 @@ from dpxdt.client import timer_worker
 from dpxdt.client import workers
 
 FLAGS.phantomjs_binary = 'phantomjs'
-FLAGS.phantomjs_timeout = 20
+FLAGS.phantomjs_timeout = 120
 
 gflags.DEFINE_boolean(
         'list_tests', False,
@@ -320,7 +320,7 @@ class WaitForUrlWorkflowItem(workers.WorkflowItem):
 
     def run(self, tmp_dir, waitfor, heartbeat=None, start_time=None):
         assert 'url' in waitfor
-        timeout = waitfor.get('timeout_secs', 10)
+        timeout = waitfor.get('timeout_secs', 120)
         if not start_time:
             start_time = time.time()
 
